@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/logica.js" ></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/validacion.js"></script>
+    <title>Subneteo</title>
+</head>
+<body>
+    <div>
+        <div class="cont_perfil">
+            <h1>Linares Medina Fernando Agustin
+                <br>
+                5IV7
+            </h1>
+            <BR>
+            </BR>
+            <br>
+            <br>
+            <h1>Subneteo</h1>
+            <table>
+                <tr>
+                    <td>
+                        <label>Ingresa la ip</label>
+                    </td>
+                    <td>
+                        <input type="text" class="input_text" id="ip" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Número de subredes</label>
+                    </td>
+                    <td>
+                        <input type="text" class="input_text" id="subred" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="boton" value="Calcular" onclick="resolver()" >
+                    </td>
+                    <td>
+                        
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        <br>
+        <div class="cont_perfil">
+            <table>
+                <tr>
+                    <td>
+                        <label>IP en binario</label>
+                    </td>
+                    <td>
+                        <input type="text" class="input_text" id="ipbin" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Tipo de clase</label>  
+                    </td>
+                    <td>
+                        <input type="text" class="input_text" id="clase" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Máscara de subred nueva</label>
+                    </td>
+                    <td>
+                        <input type="text" class="input_text" id="maskadap" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Máscara de subred en binario</label>
+                    </td>
+                    <td>
+                        <input type="text" class="input_text" id="maskbin" readonly>
+                    </td>
+                </tr>
+                
+            </table>
+        </div>
+        <br>
+        <div>
+            <table id="tabla1" class="table_admon">           
+            </table>
+        </div>
+    </div>  
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <hr>
+    
+                
+    <div class="cont_perfil">
+        <h1>Subneteo por host</h1>
+        <div>
+            <p>Direccion IP: <input type="text" id="dip" class="input_text" onkeypress="return ip(event)" maxlength="15"></p>
+            <p>Numero de host: <input type="text" id="nhost" class="input_text" onkeypress="return num(event)" maxlength="7"></p>
+                    <input type="button" class="boton" value="Subneteo" onclick="subneteohost()">
+                    <input type="button"  class="boton" value="binario" onclick="convertirbin()"></p>
+                
+            <div id="texto">                
+                    <p id="resultado"></p>
+            </div>
+            <div id="divtable"></div>               
+            </div>
+        </div>
+     </div>   
+
+</body>
+</html>z
